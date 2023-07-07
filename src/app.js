@@ -36,5 +36,6 @@ function displayTemperature(response) {
   dataElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 let apiKey = "ce1cf622991644d8b6693d690ebcfb42";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Shiraz&appid=${apiKey}&units=metric`;
+let city = "Shiraz";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 axios.get(apiUrl).then(displayTemperature);
